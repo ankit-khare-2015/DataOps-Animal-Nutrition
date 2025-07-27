@@ -1,0 +1,12 @@
+name: animal_nutrition
+version: 1.0
+config-version: 2
+
+profile: default
+
+model-paths: ["models"]
+seed-paths: ["data"]
+
+models:
+  animal_nutrition:
+    +materialized: table

@@ -1,0 +1,35 @@
+# DBT and Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.*
+.venv/
+venv/
+.dbt/
+
+# Airflow
+airflow/airflow.db
+airflow/logs/
+
+# VSCode and IDEs
+.vscode/
+.idea/
+.DS_Store
+
+# Docker
+*.log
+*.pid
+*.bak
+
+# dbt target & compiled folders
+/dbt_project/target/
+/dbt_project/dbt_modules/
+/dbt_project/dbt_packages/
+
+# Seed & profile files (optional for CI)
+dbt_project/profiles.yml
+
+# OS Files
+Thumbs.db

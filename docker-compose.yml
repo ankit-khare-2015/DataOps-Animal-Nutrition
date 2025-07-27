@@ -1,0 +1,53 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: dbtuser
+      POSTGRES_PASSWORD: dbtpass
+      POSTGRES_DB: animal_nutrition
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  airflow:
+    build: ./airflow
+    restart: always
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://dbtuser:dbtpass@postgres:5432/animal_nutrition
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'False'
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./dbt_project:/opt/airflow/dbt_project
+   
+    command: bash -c "airflow db upgrade && airflow scheduler & airflow webserver"
+
+  dbt:
+    image: ghcr.io/dbt-labs/dbt-postgres:1.6.0
+    container_name: dbt
+    volumes:
+      - ./dbt_project:/usr/app
+      - ./dbt_project/config/profiles.yml:/root/.dbt/profiles.yml
+    working_dir: /usr/app
+    depends_on:
+      - postgres
+    entrypoint: ["tail", "-f", "/dev/null"]
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana:/etc/grafana/provisioning
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:

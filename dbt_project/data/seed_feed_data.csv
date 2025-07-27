@@ -1,0 +1,201 @@
+feed_id,animal_type,feed_name,protein,energy,fiber,price_per_kg,region,date
+1,Chicken,Soybean Meal,20.0,2.47,13.7,0.22,Asia,2023-01-14
+2,Sheep,Cottonseed,9.4,2.23,28.7,0.37,Asia,2023-03-29
+3,Goat,Cottonseed,13.6,2.87,31.6,0.37,Asia,2023-02-04
+4,Cow,Cottonseed,14.8,3.22,15.6,0.3,NA,2023-01-25
+5,Sheep,Oat Straw,21.4,2.46,33.4,0.45,Asia,2023-02-05
+6,Sheep,Corn Gluten,9.0,2.15,14.9,0.4,Asia,2023-04-03
+7,Cow,Wheat Bran,10.7,2.52,33.3,0.23,NA,2023-11-30
+8,Chicken,Soybean Meal,18.4,3.41,13.1,0.2,NA,2023-03-31
+9,Goat,Alfalfa Hay,13.6,2.83,27.3,0.43,EU,2023-11-21
+10,Pig,Soybean Meal,14.1,2.83,31.6,0.42,Africa,2023-04-24
+11,Pig,Alfalfa Hay,10.9,2.19,27.1,0.2,Asia,2023-04-18
+12,Sheep,Barley,8.4,2.62,19.7,0.28,Asia,2023-03-01
+13,Cow,Sorghum,13.7,2.93,23.9,0.16,EU,2023-03-11
+14,Goat,Corn Gluten,9.6,2.41,31.8,0.42,Africa,2023-02-10
+15,Pig,Alfalfa Hay,9.6,2.66,11.5,0.16,Asia,2023-04-03
+16,Pig,Soybean Meal,13.9,2.15,25.0,0.33,NA,2023-08-29
+17,Chicken,Corn Gluten,13.7,2.37,27.6,0.38,EU,2023-03-15
+18,Chicken,Wheat Bran,19.0,3.38,25.4,0.34,NA,2023-01-18
+19,Cow,Alfalfa Hay,12.7,3.27,11.1,0.39,Africa,2023-12-16
+20,Cow,Alfalfa Hay,12.3,2.33,28.9,0.35,Africa,2023-10-20
+21,Sheep,Grass Silage,12.8,3.47,19.2,0.16,NA,2023-11-06
+22,Sheep,Cottonseed,20.8,3.05,30.3,0.16,EU,2023-08-19
+23,Goat,Sorghum,19.2,3.5,13.3,0.21,Africa,2023-10-13
+24,Sheep,Maize Silage,9.4,3.15,24.1,0.25,Asia,2023-10-10
+25,Goat,Corn Gluten,13.5,3.3,19.0,0.35,EU,2023-12-06
+26,Pig,Soybean Meal,12.6,3.11,17.5,0.31,NA,2023-07-29
+27,Sheep,Maize Silage,11.9,2.69,14.0,0.39,Asia,2023-05-28
+28,Cow,Grass Silage,16.0,3.08,12.2,0.16,Africa,2023-10-31
+29,Goat,Soybean Meal,20.6,2.82,12.8,0.39,Asia,2023-04-17
+30,Cow,Grass Silage,21.9,2.49,17.5,0.26,EU,2023-06-17
+31,Goat,Corn Gluten,11.2,3.19,15.0,0.4,Asia,2023-02-22
+32,Chicken,Barley,10.8,3.44,11.1,0.38,NA,2023-03-16
+33,Cow,Barley,16.5,3.17,11.4,0.19,EU,2023-11-02
+34,Cow,Maize Silage,22.0,3.34,30.0,0.15,Africa,2023-08-16
+35,Sheep,Wheat Bran,16.5,2.99,11.2,0.17,Africa,2023-04-11
+36,Goat,Cottonseed,10.4,2.94,31.6,0.21,Asia,2023-09-02
+37,Cow,Sorghum,21.8,3.09,22.0,0.32,Asia,2023-07-31
+38,Chicken,Corn Gluten,12.0,2.78,28.9,0.27,EU,2023-07-28
+39,Sheep,Sorghum,9.5,2.75,22.2,0.3,NA,2023-10-14
+40,Cow,Oat Straw,11.9,2.43,19.0,0.16,EU,2023-02-16
+41,Cow,Soybean Meal,21.7,2.85,32.6,0.24,EU,2023-08-12
+42,Pig,Corn Gluten,15.4,3.12,14.3,0.18,EU,2023-10-02
+43,Cow,Barley,16.6,3.42,15.5,0.44,Asia,2023-04-26
+44,Sheep,Cottonseed,21.2,2.38,29.9,0.21,Africa,2023-09-10
+45,Goat,Barley,15.9,3.23,23.5,0.16,Asia,2023-06-26
+46,Cow,Oat Straw,21.6,2.81,28.3,0.38,Asia,2023-01-20
+47,Chicken,Maize Silage,13.8,3.03,22.4,0.33,Asia,2023-02-08
+48,Goat,Corn Gluten,14.8,2.55,35.0,0.22,EU,2023-03-08
+49,Sheep,Wheat Bran,10.7,3.0,29.5,0.34,NA,2023-12-15
+50,Goat,Alfalfa Hay,19.4,2.99,11.8,0.33,EU,2023-01-01
+51,Goat,Cottonseed,20.2,2.31,31.8,0.41,NA,2023-01-28
+52,Cow,Wheat Bran,9.3,2.77,24.2,0.21,EU,2023-09-10
+53,Sheep,Grass Silage,18.3,3.17,31.2,0.44,Asia,2023-07-02
+54,Goat,Maize Silage,21.6,3.15,30.4,0.42,NA,2023-03-29
+55,Goat,Alfalfa Hay,8.9,3.09,29.6,0.4,EU,2023-05-12
+56,Cow,Oat Straw,12.5,2.14,20.6,0.39,EU,2023-11-29
+57,Sheep,Sorghum,11.0,2.2,21.6,0.29,Asia,2023-06-14
+58,Sheep,Barley,18.8,2.53,25.7,0.41,NA,2023-03-29
+59,Cow,Soybean Meal,16.7,2.65,33.9,0.31,NA,2023-03-23
+60,Pig,Cottonseed,7.4,3.18,25.5,0.33,Africa,2023-10-09
+61,Chicken,Corn Gluten,17.6,2.26,29.4,0.2,NA,2023-03-09
+62,Goat,Grass Silage,15.3,2.57,10.8,0.37,Asia,2023-11-20
+63,Chicken,Sorghum,12.4,2.93,20.4,0.36,Africa,2023-10-01
+64,Goat,Grass Silage,8.0,2.52,11.2,0.32,EU,2023-12-31
+65,Chicken,Cottonseed,21.1,3.36,29.3,0.33,EU,2023-08-09
+66,Goat,Wheat Bran,21.1,2.82,34.0,0.28,EU,2023-12-22
+67,Pig,Maize Silage,15.8,2.61,11.5,0.2,Africa,2023-06-22
+68,Chicken,Barley,12.9,2.96,17.0,0.32,EU,2023-04-11
+69,Goat,Wheat Bran,20.0,2.49,14.7,0.38,NA,2023-06-13
+70,Pig,Soybean Meal,9.7,3.17,23.5,0.38,Africa,2023-06-03
+71,Pig,Corn Gluten,11.3,3.21,30.4,0.16,EU,2023-02-11
+72,Cow,Alfalfa Hay,11.9,3.32,15.8,0.18,NA,2023-08-01
+73,Cow,Maize Silage,9.0,3.14,30.7,0.28,EU,2023-02-10
+74,Pig,Soybean Meal,19.4,2.91,10.5,0.19,EU,2023-11-12
+75,Pig,Wheat Bran,9.0,3.24,21.1,0.44,NA,2023-11-25
+76,Goat,Barley,21.0,2.24,31.2,0.16,EU,2023-06-22
+77,Chicken,Grass Silage,12.6,2.47,31.6,0.23,EU,2023-03-04
+78,Goat,Barley,15.4,3.13,30.4,0.25,NA,2023-04-16
+79,Chicken,Corn Gluten,15.6,3.22,23.0,0.23,EU,2023-10-22
+80,Sheep,Alfalfa Hay,16.3,2.28,34.5,0.18,Asia,2023-02-16
+81,Cow,Barley,9.6,3.16,14.3,0.3,Africa,2023-11-30
+82,Goat,Alfalfa Hay,8.3,2.41,15.3,0.26,Asia,2023-09-29
+83,Goat,Corn Gluten,19.1,2.77,35.0,0.31,EU,2023-07-05
+84,Chicken,Grass Silage,18.0,2.32,15.1,0.29,EU,2023-12-24
+85,Chicken,Corn Gluten,13.8,2.01,20.0,0.3,NA,2023-02-22
+86,Cow,Oat Straw,8.4,2.04,26.7,0.41,EU,2023-07-21
+87,Chicken,Grass Silage,8.7,2.38,18.5,0.17,NA,2023-08-09
+88,Chicken,Alfalfa Hay,12.9,3.02,28.2,0.21,Asia,2023-02-25
+89,Pig,Alfalfa Hay,18.6,2.11,22.6,0.21,Africa,2023-10-04
+90,Chicken,Grass Silage,20.3,3.13,27.1,0.38,NA,2023-09-30
+91,Pig,Oat Straw,11.0,2.5,34.4,0.24,NA,2023-05-23
+92,Goat,Corn Gluten,16.1,2.41,11.8,0.21,Asia,2023-11-21
+93,Chicken,Cottonseed,12.2,2.77,22.0,0.42,NA,2023-10-15
+94,Sheep,Barley,19.1,3.12,11.1,0.19,Asia,2023-08-14
+95,Cow,Sorghum,15.3,2.78,12.9,0.26,EU,2023-09-03
+96,Chicken,Cottonseed,7.8,3.01,31.2,0.27,EU,2023-05-17
+97,Chicken,Oat Straw,21.1,3.26,14.1,0.33,Africa,2023-05-26
+98,Pig,Grass Silage,12.6,3.26,34.9,0.2,Africa,2023-04-25
+99,Pig,Barley,8.1,3.13,27.3,0.21,Africa,2023-04-06
+100,Chicken,Grass Silage,10.4,2.83,13.7,0.21,Asia,2023-06-24
+101,Pig,Alfalfa Hay,11.6,2.54,13.1,0.22,Africa,2023-05-17
+102,Goat,Barley,16.5,2.29,21.6,0.4,Africa,2023-05-14
+103,Sheep,Barley,12.8,2.21,19.0,0.35,NA,2023-07-06
+104,Goat,Soybean Meal,12.3,2.59,26.8,0.23,Africa,2023-02-20
+105,Cow,Corn Gluten,19.1,3.48,33.4,0.18,Asia,2023-07-04
+106,Sheep,Maize Silage,13.6,3.23,33.1,0.25,NA,2023-01-08
+107,Cow,Soybean Meal,12.1,2.43,29.7,0.43,EU,2023-03-23
+108,Goat,Soybean Meal,17.1,2.04,31.0,0.16,EU,2023-03-22
+109,Chicken,Cottonseed,9.8,2.73,20.3,0.27,Asia,2023-03-15
+110,Sheep,Sorghum,10.1,2.39,25.1,0.41,EU,2023-11-24
+111,Pig,Barley,21.6,2.07,22.5,0.43,Africa,2023-04-06
+112,Pig,Soybean Meal,7.1,2.47,31.7,0.38,NA,2023-11-14
+113,Sheep,Maize Silage,16.0,2.24,14.8,0.41,EU,2023-02-09
+114,Goat,Wheat Bran,9.5,2.91,11.0,0.23,EU,2023-10-11
+115,Pig,Cottonseed,17.3,2.28,18.9,0.27,Asia,2023-05-16
+116,Goat,Sorghum,13.3,2.22,14.7,0.19,Africa,2023-05-27
+117,Chicken,Cottonseed,19.7,3.38,22.5,0.28,Africa,2023-06-02
+118,Chicken,Barley,11.3,2.91,26.1,0.16,EU,2023-07-31
+119,Cow,Grass Silage,12.0,2.39,22.2,0.36,Africa,2023-04-07
+120,Pig,Cottonseed,12.9,3.47,21.0,0.43,EU,2023-05-16
+121,Cow,Maize Silage,16.9,2.53,32.9,0.3,NA,2023-11-01
+122,Pig,Alfalfa Hay,14.8,2.74,16.3,0.41,EU,2023-01-01
+123,Sheep,Soybean Meal,12.6,2.16,29.4,0.17,Asia,2023-10-03
+124,Cow,Sorghum,10.0,2.09,34.2,0.18,Africa,2023-07-12
+125,Cow,Alfalfa Hay,10.1,3.12,10.3,0.39,EU,2023-10-12
+126,Pig,Corn Gluten,17.8,2.26,12.1,0.17,Asia,2023-07-21
+127,Pig,Cottonseed,7.7,2.14,32.7,0.38,NA,2023-07-11
+128,Chicken,Corn Gluten,9.4,2.82,31.4,0.43,EU,2023-12-26
+129,Chicken,Oat Straw,16.2,2.09,18.2,0.23,Africa,2023-02-20
+130,Cow,Soybean Meal,17.9,2.19,23.7,0.42,Africa,2023-06-28
+131,Pig,Maize Silage,10.9,2.13,31.5,0.31,NA,2023-08-21
+132,Pig,Sorghum,21.7,2.01,10.8,0.17,NA,2023-09-16
+133,Pig,Cottonseed,17.5,3.29,20.6,0.34,EU,2023-03-31
+134,Sheep,Corn Gluten,12.3,2.37,17.7,0.28,Asia,2023-02-05
+135,Cow,Corn Gluten,13.9,2.42,18.9,0.23,NA,2023-09-21
+136,Cow,Maize Silage,16.5,2.64,34.1,0.37,Asia,2023-08-05
+137,Chicken,Corn Gluten,18.9,2.76,16.1,0.32,Asia,2023-06-15
+138,Goat,Maize Silage,12.4,2.64,29.2,0.27,Africa,2023-06-04
+139,Chicken,Alfalfa Hay,10.8,3.14,13.8,0.41,Africa,2023-06-12
+140,Cow,Maize Silage,20.6,3.26,26.0,0.16,NA,2023-05-09
+141,Chicken,Cottonseed,16.4,2.5,29.9,0.41,NA,2023-08-26
+142,Cow,Corn Gluten,11.1,2.98,10.9,0.45,EU,2023-05-30
+143,Chicken,Wheat Bran,12.4,2.01,32.2,0.29,NA,2023-12-28
+144,Pig,Cottonseed,15.7,2.85,20.6,0.42,Asia,2023-03-18
+145,Pig,Wheat Bran,18.6,3.31,34.5,0.17,EU,2023-07-27
+146,Pig,Soybean Meal,9.8,2.72,22.9,0.16,Africa,2023-03-13
+147,Chicken,Grass Silage,7.9,2.18,17.7,0.19,Africa,2023-04-28
+148,Cow,Corn Gluten,7.3,3.13,15.2,0.15,Africa,2023-03-13
+149,Pig,Maize Silage,16.2,2.19,19.3,0.44,Asia,2023-11-28
+150,Chicken,Oat Straw,9.0,2.2,23.9,0.42,Asia,2023-06-22
+151,Chicken,Sorghum,8.7,3.1,16.4,0.34,EU,2023-09-23
+152,Goat,Alfalfa Hay,13.7,3.44,17.6,0.39,NA,2023-10-12
+153,Goat,Corn Gluten,15.5,2.77,27.1,0.27,EU,2023-09-28
+154,Chicken,Cottonseed,7.1,2.32,22.4,0.44,Asia,2023-11-09
+155,Chicken,Grass Silage,8.1,2.06,10.8,0.24,Africa,2023-08-13
+156,Chicken,Wheat Bran,13.5,2.55,23.6,0.42,NA,2023-09-19
+157,Chicken,Maize Silage,17.1,3.43,14.4,0.31,NA,2023-08-24
+158,Chicken,Alfalfa Hay,8.4,2.44,25.9,0.19,Asia,2023-06-30
+159,Cow,Grass Silage,19.2,3.29,25.2,0.25,NA,2023-11-04
+160,Goat,Grass Silage,17.9,2.6,19.1,0.2,EU,2023-10-30
+161,Pig,Sorghum,7.5,3.28,27.3,0.31,Africa,2023-02-02
+162,Pig,Cottonseed,21.1,3.45,22.2,0.3,NA,2023-06-23
+163,Goat,Barley,8.5,2.71,21.0,0.32,Africa,2023-06-24
+164,Pig,Sorghum,8.3,3.22,20.3,0.25,Africa,2023-11-12
+165,Sheep,Barley,8.1,2.57,25.8,0.33,Africa,2023-08-04
+166,Goat,Maize Silage,16.4,2.49,17.1,0.42,NA,2023-09-11
+167,Goat,Oat Straw,17.5,2.69,15.4,0.4,EU,2023-12-03
+168,Pig,Alfalfa Hay,11.3,2.45,17.4,0.27,EU,2023-03-08
+169,Sheep,Barley,19.6,3.39,10.0,0.33,Africa,2023-09-29
+170,Pig,Corn Gluten,8.8,3.01,18.9,0.17,Africa,2023-07-04
+171,Sheep,Sorghum,10.7,2.75,10.7,0.16,Asia,2023-11-29
+172,Sheep,Cottonseed,18.9,3.29,17.2,0.25,Asia,2023-05-07
+173,Chicken,Wheat Bran,15.7,2.37,34.2,0.26,Africa,2023-03-06
+174,Pig,Grass Silage,16.8,2.53,16.2,0.28,EU,2023-01-23
+175,Goat,Cottonseed,18.6,2.74,22.4,0.23,NA,2023-08-18
+176,Cow,Corn Gluten,14.9,2.79,25.1,0.22,Asia,2023-12-19
+177,Cow,Maize Silage,11.2,3.46,12.9,0.43,EU,2023-02-25
+178,Sheep,Maize Silage,14.8,2.16,27.0,0.16,EU,2023-01-15
+179,Chicken,Wheat Bran,14.0,2.64,28.8,0.22,EU,2023-11-10
+180,Cow,Maize Silage,11.6,2.72,33.4,0.19,EU,2023-03-11
+181,Chicken,Wheat Bran,10.0,2.53,34.1,0.41,EU,2023-03-19
+182,Sheep,Wheat Bran,10.5,3.07,18.7,0.25,Asia,2023-11-15
+183,Cow,Oat Straw,13.8,3.26,26.2,0.4,NA,2023-12-14
+184,Cow,Soybean Meal,9.5,2.69,29.4,0.28,NA,2023-03-29
+185,Sheep,Barley,13.1,2.36,28.1,0.24,NA,2023-01-16
+186,Pig,Maize Silage,17.4,2.92,32.5,0.21,Africa,2023-03-23
+187,Chicken,Sorghum,16.1,3.03,20.1,0.19,NA,2023-10-28
+188,Sheep,Cottonseed,15.6,2.64,22.0,0.34,EU,2023-06-07
+189,Sheep,Soybean Meal,21.4,3.27,13.6,0.2,NA,2023-02-24
+190,Cow,Maize Silage,20.1,2.78,14.5,0.16,NA,2023-05-25
+191,Pig,Sorghum,11.7,3.14,25.4,0.21,EU,2023-10-26
+192,Pig,Corn Gluten,11.7,2.4,26.9,0.16,EU,2023-11-19
+193,Chicken,Barley,19.5,2.62,29.0,0.32,Africa,2023-03-08
+194,Pig,Maize Silage,10.0,2.56,11.1,0.42,NA,2023-02-16
+195,Chicken,Grass Silage,20.7,2.1,17.5,0.23,EU,2023-08-29
+196,Cow,Grass Silage,17.8,3.39,26.2,0.23,Africa,2023-07-04
+197,Pig,Alfalfa Hay,21.4,2.91,25.6,0.23,EU,2023-06-03
+198,Pig,Cottonseed,17.1,2.13,17.6,0.17,NA,2023-04-29
+199,Chicken,Sorghum,20.9,2.5,21.0,0.15,Asia,2023-06-15
+200,Pig,Grass Silage,12.1,3.27,26.0,0.45,Asia,2023-01-26

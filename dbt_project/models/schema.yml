@@ -1,0 +1,61 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: public
+    tables:
+      - name: seed_feed_data
+      - name: seed_region_profiles
+
+models:
+  - name: stg_animal_feed
+    columns:
+      - name: feed_id
+        tests: [unique, not_null]
+      - name: price_per_kg
+        tests: [not_null]
+
+  - name: stg_region_profiles
+    columns:
+      - name: region
+        tests: [not_null, unique]
+      - name: avg_rainfall_mm
+        tests: [not_null]
+
+  - name: dim_region
+    description: Dimension table for region attributes
+    columns:
+      - name: region
+        tests: [not_null, unique]
+      - name: climate_zone
+        tests: [not_null]
+
+  - name: mart_avg_price_by_region
+    description: Shows average feed price per region
+    columns:
+      - name: region
+        tests: [not_null]
+      - name: avg_price_per_kg
+        tests: [not_null]
+
+  - name: mart_nutrient_summary
+    description: Nutrient averages grouped by animal type
+    columns:
+      - name: animal_type
+        tests: [not_null]
+      - name: avg_protein
+        tests: [not_null]
+
+  - name: mart_feed_cost_efficiency
+    description: Protein and energy efficiency per cost and region
+    columns:
+      - name: protein_per_dollar
+        tests: [not_null]
+      - name: energy_per_dollar
+        tests: [not_null]
+
+  - name: audit_feed_data_volume
+    description: Row count tracker for data observability
+    columns:
+      - name: row_count
+        tests: [not_null]

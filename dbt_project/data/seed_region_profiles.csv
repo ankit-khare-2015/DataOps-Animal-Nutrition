@@ -1,0 +1,5 @@
+region,avg_rainfall_mm,main_livestock,climate_zone
+EU,700,Cow,Temperate
+Asia,900,Goat,Tropical
+Africa,850,Sheep,Semi-arid
+NA,600,Pig,Continental
