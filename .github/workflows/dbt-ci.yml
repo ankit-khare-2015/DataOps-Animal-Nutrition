@@ -27,7 +27,7 @@ jobs:
         run: |
           echo "Creating default profile"
           mkdir -p ~/.dbt
-          cp profiles.yml ~/.dbt/profiles.yml    # Move profile into expected location
+          cp config/profiles.yml ~/.dbt/profiles.yml    # Move profile into expected location
 
       - name: Lint SQL (optional)
         run: |
