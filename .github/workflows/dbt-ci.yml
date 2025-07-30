@@ -9,7 +9,20 @@ on:
 jobs:
   dbt:
     runs-on: ubuntu-latest      # GitHub-hosted runner OS
-
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_USER: dbtuser
+          POSTGRES_PASSWORD: dbtpass
+          POSTGRES_DB: animal_nutrition
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
       - name: Checkout code
         uses: actions/checkout@v3  # Checks out your repository to the runner
