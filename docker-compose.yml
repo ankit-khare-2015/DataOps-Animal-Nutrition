@@ -26,6 +26,7 @@ services:
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./dbt_project:/opt/airflow/dbt_project
+      - ./dbt_project/config/profiles.yml:/home/airflow/.dbt/profiles.yml
    
     command: bash -c "airflow db upgrade && airflow scheduler & airflow webserver"
 
