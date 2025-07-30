@@ -40,7 +40,7 @@ jobs:
         run: |
           echo "Creating default profile"
           mkdir -p ~/.dbt
-          cp config/profiles.yml ~/.dbt/profiles.yml    # Move profile into expected location
+          cp ci-config/profiles.yml ~/.dbt/profiles.yml    # Move profile into expected location
 
       - name: Lint SQL (optional)
         continue-on-error: true  # Continue even if linting fails
