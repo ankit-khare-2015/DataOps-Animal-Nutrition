@@ -1,0 +1,51 @@
+name: dbt CI
+
+on:
+  push:
+    branches: [ main ]         # Trigger workflow on push to main
+  pull_request:
+    branches: [ main ]         # Trigger workflow on PR to main
+
+jobs:
+  dbt:
+    runs-on: ubuntu-latest      # GitHub-hosted runner OS
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # Checks out your repository to the runner
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'    # Required for dbt to run
+
+      - name: Install dbt-postgres
+        run: pip install dbt-postgres==1.6.0 dbt-core==1.6.0  # Installs dbt dependencies
+
+      - name: Setup DBT Project
+        working-directory: ./dbt_project
+        run: |
+          echo "Creating default profile"
+          mkdir -p ~/.dbt
+          cp profiles.yml ~/.dbt/profiles.yml    # Move profile into expected location
+
+      - name: Lint SQL (optional)
+        run: |
+          sudo apt-get update && sudo apt-get install -y sqlfluff  # Install linter
+          sqlfluff lint ./dbt_project/models --dialect=postgres   # Check for SQL formatting issues
+
+      - name: dbt debug
+        working-directory: ./dbt_project
+        run: dbt debug --profiles-dir ~/.dbt --project-dir .   # Verifies DBT setup
+
+      - name: dbt seed
+        working-directory: ./dbt_project
+        run: dbt seed --profiles-dir ~/.dbt --project-dir .    # Loads seed data
+
+      - name: dbt run
+        working-directory: ./dbt_project
+        run: dbt run --profiles-dir ~/.dbt --project-dir .     # Runs models
+
+      - name: dbt test
+        working-directory: ./dbt_project
+        run: dbt test --profiles-dir ~/.dbt --project-dir .    # Runs data tests
