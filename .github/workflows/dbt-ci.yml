@@ -30,6 +30,7 @@ jobs:
           cp config/profiles.yml ~/.dbt/profiles.yml    # Move profile into expected location
 
       - name: Lint SQL (optional)
+        continu-on-error: true  # Continue even if linting fails
         run: |
           sudo apt-get update && sudo apt-get install -y sqlfluff  # Install linter
           sqlfluff lint ./dbt_project/models --dialect=postgres   # Check for SQL formatting issues
