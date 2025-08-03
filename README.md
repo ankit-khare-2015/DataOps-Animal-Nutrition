@@ -4,6 +4,10 @@
 
 This project demonstrates how to set up a complete DataOps pipeline using Airflow, dbt, PostgreSQL, and Grafana. The focus is on building a robust, testable, and observable data platform with both technical and business monitoring dashboards. The project uses animal feed and regional data to showcase business use cases in feed efficiency, cost trends, and nutrient balance for various livestock types across regions.
 
+### Why This Project Matters
+
+DataOps remains one of the most challenging areas to implement effectively across data teams. This project is designed for Data Engineers, Lead Data Engineers, and Data Architects who want to understand and adopt core DataOps design principles. It helps bridge the gap between theory and real-world tooling by demonstrating best practices and execution workflows.
+
 ### Business Context
 
 The data used in this project represents various animal feed types, associated nutritional values (protein, energy, fiber), costs, and region-specific information such as average rainfall and livestock types. The insights drawn from this data help stakeholders make informed decisions about cost-effective and nutritionally efficient feed strategies.
@@ -70,7 +74,7 @@ DataOps is the application of Agile and DevOps principles to data pipelines. It 
                    └────────┬─────┘
                             ↓
       ┌─────────────┐   ┌───────────────┐   ┌───────────────┐
-      │ dbt Seed    │→→ │ dbt Run       │→→│ dbt Test       │
+      │ dbt Seed    │→→ │ dbt Run       │→→ │ dbt Test      │
       └─────────────┘   └───────────────┘   └───────────────┘
                             ↓
                   ┌────────────────────────┐
@@ -173,6 +177,76 @@ Seed files are found in `dbt/seeds/` and include data like feed type, price, and
 * **mart\_nutrient\_summary**:
 
   * animal\_type, avg\_protein, avg\_energy, avg\_fiber
+
+Here is a simple schema diagram based on the tables and data you've shared. It reflects the **DataOps pipeline layers** — from **Seed Data → Staging → Marts → Audit Tables**, with appropriate relationships and column examples for each layer.
+
+---
+
+### 🗂️ **Schema Overview**
+
+```text
+         ┌────────────────────────────┐
+         │        Seed Layer          │
+         └────────────────────────────┘
+            ↓                    ↓
+┌────────────────────┐     ┌──────────────────────┐
+│  seed_animal_feed  │     │ seed_region_profiles │
+│────────────────────│     │──────────────────────│
+│ feed_id            │     │ region               │
+│ animal_type        │     │ avg_rainfall_mm      │
+│ feed_name          │     │ main_livestock       │
+│ protein            │     │ climate_zone         │
+│ energy             │     └──────────────────────┘
+│ fiber              │
+│ price_per_kg       │
+│ region             │
+│ date               │
+└────────────────────┘
+            ↓
+         (Transform)
+
+         ┌────────────────────────────┐
+         │        Staging Layer       │
+         └────────────────────────────┘
+                ↓
+       ┌─────────────────────────────┐
+       │     stg_animal_feed         │ ← cleaned/transformed
+       └─────────────────────────────┘
+       │ feed_id, animal_type, ...   │
+       └─────────────────────────────┘
+                ↓ (joins/aggregates)
+       ┌──────────────────────────────────────┐
+       │             Mart Layer               │
+       └──────────────────────────────────────┘
+  ┌────────────────────┬──────────────────────────────┬───────────────────────────┐
+  │ mart_avg_price_by_ │ mart_feed_cost_efficiency    │ mart_nutrient_summary     │
+  │ region              │                              │                           │
+  │────────────────────│──────────────────────────────│───────────────────────────│
+  │ region              │ feed_id, feed_name, region,  │ animal_type, avg_protein, │
+  │ avg_price_per_kg    │ protein_per_dollar, energy_  │ avg_energy, avg_fiber     │
+  │                     │ per_dollar                   │                           │
+  └────────────────────┴──────────────────────────────┴───────────────────────────┘
+                                ↓
+         ┌─────────────────────────────────┐
+         │         Audit Layer             │
+         └─────────────────────────────────┘
+         │ audit_feed_data_volume         │
+         │────────────────────────────────│
+         │ audit_date, row_count          │
+         └─────────────────────────────────┘
+```
+
+---
+
+### 💡 Relationships Summary
+
+| From Table             | To Table                 | Relationship                            |
+| ---------------------- | ------------------------ | --------------------------------------- |
+| `seed_animal_feed`     | `stg_animal_feed`        | Direct transformation                   |
+| `seed_region_profiles` | `dim_region`             | 1:1 mapping (can also be reference dim) |
+| `stg_animal_feed`      | `mart_*` tables          | Used for aggregations and metrics       |
+| `stg_animal_feed`      | `audit_feed_data_volume` | Used to track daily load row count      |
+
 
 ---
 
