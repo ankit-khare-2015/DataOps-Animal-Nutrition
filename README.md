@@ -1,5 +1,7 @@
-# Animal Nutrition DataOps Project
+# Designing DataOps Pipelines: A Practical Guide Using Animal Nutrition Data
 
+
+> ![Dashboard](docs/monitoring-report.png)
 ## Project Goals
 
 This project demonstrates how to set up a complete DataOps pipeline using Airflow, dbt, PostgreSQL, and Grafana. The focus is on building a robust, testable, and observable data platform with both technical and business monitoring dashboards. The project uses animal feed and regional data to showcase business use cases in feed efficiency, cost trends, and nutrient balance for various livestock types across regions.
@@ -87,6 +89,21 @@ DataOps is the application of Agile and DevOps principles to data pipelines. It 
 ```
 
 ---
+## Makefile Overview
+
+The Makefile simplifies Docker command execution for this project. Run `make help` to see available commands and their descriptions.  
+**Note:** Use the `prune` command with caution, as it will remove all unused Docker volumes and images.
+
+| Command        | Description                       |
+| -------------- | --------------------------------- |
+| `make up`      | Start all Docker services         |
+| `make down`    | Stop all services                 |
+| `make init`    | DB migration for Airflow metadata |
+| `make user`    | Create admin user for Airflow     |
+| `make logs`    | View Docker logs                  |
+| `make prune`   | Clean up unused Docker volumes    |
+| `make rebuild` | Rebuild containers without cache  |
+
 
 ## Execution Steps
 
@@ -101,7 +118,6 @@ make up
 ### 2. Initialize DB and Create Airflow User
 
 ```bash
-make init
 make user
 ```
 
@@ -110,22 +126,12 @@ make user
 * Navigate to `http://localhost:8080`
 * Login with `airflow / airflow`
 * Trigger `animal_nutrition_dag`
-
-📸 *Placeholder for Screenshot*: *Airflow DAG UI*
-
----
-
-## Makefile Overview
-
-| Command        | Description                       |
-| -------------- | --------------------------------- |
-| `make up`      | Start all Docker services         |
-| `make down`    | Stop all services                 |
-| `make init`    | DB migration for Airflow metadata |
-| `make user`    | Create admin user for Airflow     |
-| `make logs`    | View Docker logs                  |
-| `make prune`   | Clean up unused Docker volumes    |
-| `make rebuild` | Rebuild containers without cache  |
+<p align="center">
+  <img src="docs/airflow-a.png" width="400" alt="Pipeline Health Dashboard"/>
+  <img src="docs/airflow-b.png" width="400" alt="Pipeline Health Dashboard"/>
+  <img src="docs/airflow-c.png" width="400" alt="Pipeline Health Dashboard"/>
+  <img src="docs/airflow-d.png" width="400" alt="Pipeline Health Dashboard"/>
+</p>
 
 ---
 
@@ -295,3 +301,20 @@ PythonOperator(
 
 * Add Great Expectations for advanced validation
 * Configure alerting and anomaly detection
+* Add Data Version with tools like nessie
+
+
+---
+
+## 📚 References & Learning Resources
+
+| Topic                                              | Resource                                                                                                                                             |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Apache Airflow**                                 | [Airflow Documentation](https://airflow.apache.org/docs/apache-airflow/stable/index.html) <br> [Astronomer Learn](https://www.astronomer.io/guides/) |
+| **dbt (Data Build Tool)**                          | [dbt Docs](https://docs.getdbt.com/) <br> [Learn dbt - Official Courses](https://learn.getdbt.com/)                                                  |
+| **GitLab CI/CD**                                   | [GitLab CI/CD Pipelines Guide](https://docs.gitlab.com/ee/ci/)                                                                                       |
+| **GitHub Actions**                                 | [GitHub Actions Docs](https://docs.github.com/en/actions)                                                                                            |
+| **Versioned Data with Nessie**                     | [Project Nessie GitHub](https://github.com/projectnessie/nessie) <br> [Nessie Docs](https://projectnessie.org/learn/)                                |
+| **PostgreSQL**                                     | [PostgreSQL Tutorial](https://www.postgresqltutorial.com/)                                                                                           |
+| **Grafana Dashboards**                             | [Grafana Docs](https://grafana.com/docs/grafana/latest/)                                                                                             |
+| **Great Expectations** *(optional for next steps)* | [Great Expectations Docs](https://docs.greatexpectations.io/)                                                                                        |
