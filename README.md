@@ -148,8 +148,6 @@ make user
 | Model Execution Trend     | Shows historical performance of models   |
 | Data Quality Overview     | Visualizes dbt test results and trends   |
 
-📸 *Placeholder for Screenshot*: *Grafana dashboard overview*
-
 ---
 
 ## Seed Data and dbt Data Model
@@ -319,7 +317,7 @@ PythonOperator(
 | **dbt (Data Build Tool)**                          | [dbt Docs](https://docs.getdbt.com/) <br> [Learn dbt - Official Courses](https://learn.getdbt.com/)                                                  |
 | **GitLab CI/CD**                                   | [GitLab CI/CD Pipelines Guide](https://docs.gitlab.com/ee/ci/)                                                                                       |
 | **GitHub Actions**                                 | [GitHub Actions Docs](https://docs.github.com/en/actions)                                                                                            |
-| **Versioned Data with Nessie**                     | [Project Nessie GitHub](https://github.com/projectnessie/nessie) <br> [Nessie Docs](https://projectnessie.org/learn/)                                |
+| **Versioned Data with Nessie**                     | [Project Nessie GitHub](https://github.com/projectnessie/nessie)                                |
 | **PostgreSQL**                                     | [PostgreSQL Tutorial](https://www.postgresqltutorial.com/)                                                                                           |
 | **Grafana Dashboards**                             | [Grafana Docs](https://grafana.com/docs/grafana/latest/)                                                                                             |
 | **Great Expectations** *(optional for next steps)* | [Great Expectations Docs](https://docs.greatexpectations.io/)                                                                                        |
