@@ -133,17 +133,13 @@ make user
   <img src="docs/airflow-d.png" width="400" alt="Pipeline Health Dashboard"/>
 </p>
 
----
-
-## Common Issues Faced
-
-* **Git errors**: Minimal dbt debug mode to bypass unnecessary checks
-* **Test failures**: Validate `dbt test` data and assertions
-* **Missing log tables**: Ensure macros and SQL for logging are executed
-* **Airflow bash errors**: Validate dependency installation and environment paths
+### 4. Access Grafana
+* Navigate to `http://localhost:3000/`
+* Login with admin/admin
+* Test the datasource connection 
+* View the existing report **Data Pipeline Run History & Audit Log Purpose**
 
 ---
-
 ## Monitoring Dashboards
 
 | Dashboard Name            | Description                              |
@@ -226,19 +222,19 @@ Here is a simple schema diagram based on the tables and data you've shared. It r
        └──────────────────────────────────────┘
   ┌────────────────────┬──────────────────────────────┬───────────────────────────┐
   │ mart_avg_price_by_ │ mart_feed_cost_efficiency    │ mart_nutrient_summary     │
-  │ region              │                              │                           │
+  │ region             │                              │                           │
   │────────────────────│──────────────────────────────│───────────────────────────│
-  │ region              │ feed_id, feed_name, region,  │ animal_type, avg_protein, │
-  │ avg_price_per_kg    │ protein_per_dollar, energy_  │ avg_energy, avg_fiber     │
-  │                     │ per_dollar                   │                           │
+  │ region             │ feed_id, feed_name, region,  │ animal_type, avg_protein, │
+  │ avg_price_per_kg   │ protein_per_dollar, energy_  │ avg_energy, avg_fiber     │
+  │                    │ per_dollar                   │                           │
   └────────────────────┴──────────────────────────────┴───────────────────────────┘
                                 ↓
          ┌─────────────────────────────────┐
          │         Audit Layer             │
          └─────────────────────────────────┘
-         │ audit_feed_data_volume         │
-         │────────────────────────────────│
-         │ audit_date, row_count          │
+         │ audit_feed_data_volume          │
+         │─────────────────────────────────│
+         │ audit_date, row_count           │
          └─────────────────────────────────┘
 ```
 
@@ -294,6 +290,15 @@ PythonOperator(
   dag=dag
 )
 ```
+
+---
+
+## Common Issues Faced
+
+* **Git errors**: Minimal dbt debug mode to bypass unnecessary checks
+* **Test failures**: Validate `dbt test` data and assertions
+* **Missing log tables**: Ensure macros and SQL for logging are executed
+* **Airflow bash errors**: Validate dependency installation and environment paths
 
 ---
 
