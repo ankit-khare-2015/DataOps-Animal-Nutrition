@@ -1,4 +1,4 @@
-# Animal Nutrition DataOps Project – Final README
+# Animal Nutrition DataOps Project
 
 ## Project Goals
 
