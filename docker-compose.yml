@@ -14,6 +14,7 @@ services:
 
   airflow:
     build: ./airflow
+    container_name: airflow
     restart: always
     environment:
       AIRFLOW__CORE__EXECUTOR: SequentialExecutor
