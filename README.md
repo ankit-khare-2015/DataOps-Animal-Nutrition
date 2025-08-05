@@ -110,8 +110,8 @@ The Makefile simplifies Docker command execution for this project. Run `make hel
 ### 1. Clone and Start the Project
 
 ```bash
-git clone https://github.com/ankit-khare-2015/AnimalNutriOps.git
-cd animal_nutrition_project
+git clone https://github.com/ankit-khare-2015/DataOps-Animal-Nutrition.git
+cd DataOps-Animal-Nutrition
 make up
 ```
 
