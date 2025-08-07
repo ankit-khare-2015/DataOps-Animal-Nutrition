@@ -1,7 +1,9 @@
 # Designing DataOps Pipelines: A Practical Guide Using Animal Nutrition Data
 
 
-> ![Dashboard](docs/Monitoring-Dashbard.png)
+
+<img src="docs/Monitoring-Dashbard.png" alt="description" width="400" height="600"/>
+
 ## Project Goals
 
 This project demonstrates how to set up a complete DataOps pipeline using Airflow, dbt, PostgreSQL, and Grafana. The focus is on building a robust, testable, and observable data platform with both technical and business monitoring dashboards. The project uses animal feed and regional data to showcase business use cases in feed efficiency, cost trends, and nutrient balance for various livestock types across regions.
