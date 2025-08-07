@@ -118,7 +118,7 @@ cd DataOps-Animal-Nutrition
 make up
 ```
 
-### 2. Initialize DB and Create Airflow User
+### 2. Create Airflow User
 
 ```bash
 make user
