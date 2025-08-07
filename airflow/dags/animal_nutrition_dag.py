@@ -123,4 +123,4 @@ with DAG(
 
     #dbt_seed >> dbt_run >> log_metrics
     
-    [dbt_test >> dbt_seed >> dbt_run] >> log_metrics
+    [dbt_seed >> dbt_run >> dbt_test ] >> log_metrics
