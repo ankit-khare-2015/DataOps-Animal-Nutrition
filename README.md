@@ -263,7 +263,6 @@ Here is a simple schema diagram based on the tables and data you've shared. It r
 | Feed Cost vs Nutrient Output | Tradeoff comparison between price and output |
 | Feed Type Usage Trends       | Historical trends by animal and region       |
 
-📸 *Placeholder for Screenshot*: *Business KPI dashboards*
 
 ---
 
@@ -307,7 +306,7 @@ PythonOperator(
 
 * Add Great Expectations for advanced validation
 * Configure alerting and anomaly detection
-* Add Data Version with tools like nessie
+* Add Data Version with tools like Nessie
 
 
 ---
