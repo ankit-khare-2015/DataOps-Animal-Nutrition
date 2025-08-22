@@ -16,7 +16,7 @@ DataOps remains one of the most challenging areas to implement effectively acros
 
 ### Business Context
 
-The data used in this project represents various animal feed types, associated nutritional values (protein, energy, fiber), costs, and region-specific information such as average rainfall and livestock types. The insights drawn from this data help stakeholders make informed decisions about cost-effective and nutritionally efficient feed strategies.
+The dummy data used in this project represents(one of my previous experiences) various animal feed types, associated nutritional values (protein, energy, fiber), costs, and region-specific information such as average rainfall and livestock types. The insights drawn from this data help stakeholders make informed decisions about cost-effective and nutritionally efficient feed strategies.
 
 ---
 
